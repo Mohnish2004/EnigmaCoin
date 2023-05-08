@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<link href="{{ url_for('static', filename = 'css/sb-admin.css')}}" rel="stylesheet" type="text/css">
+
+<h1>Purchase Page</h1>
+<p>Enter the amount of Enigma Coin you would like to purchase:</p>
+
+<form action="/buy_enigmacoin" method="post">
+	<label for="amount">Amount:</label>
+	<input type="text" id="amount" name="amount"><br><br>
+	
+	<div class=""> 
+		<a><button type="button" class="btn btn-primary">Buy New Coins</button></a>
+	</div>
+</form>
+
+
+{% endblock content %}
