@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, IntegerField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
-from gymcoin.models import User
+from enigmacoin.models import User
 
 class RegistrationForm(FlaskForm):
 
