@@ -1,8 +1,8 @@
-from gymcoin.models import User
-from gymcoin.forms import *
+from enigmacoin.models import User
+from enigmacoin.forms import *
 from flask import Flask, jsonify, request, render_template, url_for, flash, redirect
-from gymcoin import app, db, bcrypt
-from gymcoin import blockchainObj
+from enigmacoin import app, db, bcrypt
+from enigmacoin import blockchainObj
 from flask_login import login_user, current_user, logout_user, login_required
 from Crypto.PublicKey import RSA
 import requests
