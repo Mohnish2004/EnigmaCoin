@@ -9,6 +9,12 @@ import requests
 #FLASK ROUTES 
 @app.route("/")
 
+
+@app.route("/master")
+def master():
+    return render_template('master.html', title = "Master");
+
+
 @app.route("/home")
 def home():
     blockchainObj.resolveConflicts();
