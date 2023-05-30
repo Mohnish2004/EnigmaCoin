@@ -1,8 +1,21 @@
 {% extends "layout.html" %}
 {% block content %}
 
-	<h1>Current Verified Blockchain</h1>
-	<p>Backed by decentralized nodes.</p>
+<style>
+	body {
+		background-image: url('static/home.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: black;
+	}
+	.custom-button {
+  background-color: #CA9654; 
+  color: #000000; 
+}
+	</style>
+
+	<h1 style="color:rgb(240, 240, 246)">Current Verified Blockchain</h1>
+	<p style="color:rgb(240, 240, 246)">Backed by decentralized nodes.</p>
 	<div class="container">
 		<div class="card-columns" display: inline-block>
 			{% for block in blockchain.chain %}
@@ -29,11 +42,11 @@
 				  <li class="list-group-item">
 				  	<span class="">Timestamp</span><br>
 				  	<div class="text-truncate text-muted">
-				  		<small>{{ block.time }}</small>
+				  		<small >{{ block.time }}</small>
 				  	</div>
 				  </li>
 				  <li class="list-group-item">
-				  	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse{{loop.index}}" aria-expanded="false" aria-controls="collapse">
+				  	<button class="btn btn-primary custom-button" type="button" data-toggle="collapse" data-target="#collapse{{loop.index}}" aria-expanded="false" aria-controls="collapse">
 				   		View Transactions
 				  	</button>
 				  </li>

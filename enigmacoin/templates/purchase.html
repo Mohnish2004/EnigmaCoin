@@ -1,18 +1,35 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<link href="{{ url_for('static', filename = 'css/sb-admin.css')}}" rel="stylesheet" type="text/css">
+<form action="/buy_enigmacoin" method="post">
+<style>
+	body {
+		background-image: url('static/home.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: black;
+	}
 
-<h1>Purchase Page</h1>
-<p>Enter the amount of Enigma Coin you would like to purchase:</p>
+	.custom-button {
+  background-color: #CA9654; 
+  color: #000000; 
+}
+	
+	</style>
+
+	
+
+<h1 style="color:rgb(240, 240, 246)">Purchase Page</h1>
+<p style="color:rgb(240, 240, 246)">Enter the amount of Enigma Coin you would like to purchase:</p>
 
 <form action="/buy_enigmacoin" method="post">
-	<label for="amount">Amount:</label>
+	<label for="amount" style="color:rgb(240, 240, 246)">Amount:</label>
 	<input type="text" id="amount" name="amount"><br><br>
 	
-	<div class=""> 
-		<a><button type="button" class="btn btn-primary">Buy New Coins</button></a>
+	<div> 
+		<a><button type="button" class="btn btn-primary custom-button">Buy New Coins</button></a>
 	</div>
+</form>
 </form>
 
 

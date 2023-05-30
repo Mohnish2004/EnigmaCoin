@@ -1,9 +1,22 @@
 {% extends "layout.html" %}
 {% block content %}
 
-	<h1>Mine Blocks for Rewards</h1>
-	<p>Current Mining Reward: 50 GymCoins </p>
-	<h4>Pending Transactions:</h4>
+<style>
+	body {
+            background-image: url('static/home.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: black;
+        }
+	.custom-button {
+  background-color: #CA9654; 
+  color: #000000; 
+}
+	</style>
+
+	<h1 style="color:rgb(240, 240, 246)">Mine Blocks for Rewards</h1>
+	<p style="color:rgb(240, 240, 246)">Current Mining Reward: 50 GymCoins </p>
+	<h4 style="color:rgb(240, 240, 246)">Pending Transactions:</h4>
 	<table class="table">
 	  <thead class="thead-dark">
 	    <th scope="col">#</th>
@@ -17,25 +30,25 @@
 	  <tbody>
 	    {% for tx in blockchain.pendingTransactions %}
 	    <tr>
-	      <th scope="row">{{loop.index0}}</th>
+	      <th scope="row" style="color:rgb(240, 240, 246)">{{loop.index0}}</th>
 	      
 	      <td class="text-truncate" style="max-width: 100px;">
-	        <a>{{tx.sender}}</a>
+	        <a style="color:rgb(240, 240, 246)">{{tx.sender}}</a>
 	      </td>
 	      <td class="text-truncate" style="max-width: 100px;">
-	          <a>{{tx.reciever}}</a>
+	          <a style="color:rgb(240, 240, 246)">{{tx.reciever}}</a>
 	      </td>
-	      <td>
+	      <td style="color:rgb(240, 240, 246)">
 	        {{tx.amt}}
 	      </td>
-	      <td>
+	      <td style="color:rgb(240, 240, 246)">
 	        {{tx.time }}<br>
 	      </td>
 	      <td style="max-width: 40px;">
 	      	{% if tx.isValidTransaction() %}
-	        	<span>✓</span>
+	        	<span style="color:rgb(240, 240, 246)">✓</span>
 	        {%else%}
-	        	<span>✗</span>
+	        	<span style="color:rgb(240, 240, 246)">✗</span>
 	        {%endif%}
 	      </td>
 	    </tr>
@@ -44,11 +57,11 @@
 	</table>
 	{% if current_user.is_authenticated %}
 		<div class=""> 
-			<a href="{{url_for('mine', miner=current_user.username)}}"><button type="button" class="btn btn-primary">Mine A New Block!</button></a>
+			<a href="{{url_for('mine', miner=current_user.username)}}"><button type="button" style="color:rgb(240, 240, 246)" class="btn btn-primary custom-button">Mine A New Block!</button></a>
 		</div>
 	{% else %}
 		<div class=""> 
-			<a href="{{url_for('login')}}"><button type="button" class="btn btn-info">Sign in to mine blocks!</button></a>
+			<a href="{{url_for('login')}}"><button type="button" class="btn btn-info custom-button">Sign in to mine blocks!</button></a>
 		</div>
 	{% endif %}
 {% endblock content %}

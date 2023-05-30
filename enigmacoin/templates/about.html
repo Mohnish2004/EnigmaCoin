@@ -156,8 +156,47 @@
 
         .highlight {
             color: #CA9654;
-        }   
+        }
 
+        /* Team section styles */
+        .team-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-top: 100px;
+        }
+
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .team-member h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+            color: #E6E6E6;
+            margin-top: 20px;
+        }
+
+        .team-member p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            color: #E6E6E6;
+            margin-top: 10px;
+        }
 
     </style>
 </head>
@@ -169,7 +208,7 @@
             <h3>Enigma Coin</h3>
         </div>
         <div class="navbar-menu">
-            <a href="{{ url_for('about') }}">About</a>
+            <a href="#">About</a>
             <a href="#">Contact</a>
         </div>
         <div class="navbar-buttons">
@@ -177,18 +216,27 @@
             <a class="navbar-button signup" href="{{ url_for('register') }}">Sign Up</a>
         </div>
     </nav>
-    <img class="left-image" src="static/Group 4.png" alt="Left Image">
-    <h1 class="crypto-heading1">Make Your Payment More Secure.</h1>
-    <h1 class="crypto-heading">A crypto that relies on <span class="highlight">security</span> and <span class="highlight">transparency</span></h1>
-    <a href="{{ url_for('login') }}">
-        <button> 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                <path fill="none" d="M0 0h24v24H0z" ></path>
-                <path fill="currentColor" d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path>
-            </svg>
-            <span>Get Started</span>
-        </button>
-    </a>
+    <div class="team-container">
+        <div class="team-member">
+            <img src="static/User 05c.png" alt="Member 1">
+            <h4>Mohnish</h4>
+            <p>Executive tech-lead</p>
+        </div>
+        <div class="team-member">
+            <img src="static/User 05c.png" alt="Member 2">
+            <h4>Nicole</h4>
+            <p>Designer</p>
+        </div>
+        <div class="team-member">
+            <img src="static/User 05c.png" alt="Member 3">
+            <h4>Harsh</h4>
+            <p>Developer</p>
+        </div>
+        <div class="team-member">
+            <img src="static/User 05c.png" alt="Member 4">
+            <h4>Ryan</h4>
+            <p>Developer</p>
+        </div>
+    </div>
 </body>
-
 </html>
