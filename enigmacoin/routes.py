@@ -9,13 +9,13 @@ import requests
 #FLASK ROUTES 
 @app.route("/")
 
-@app.route("/about")
-def about():
-    return render_template('about.html', title = "about");
-
 @app.route("/master")
 def master():
     return render_template('master.html', title = "Master");
+
+@app.route("/about")
+def about():
+    return render_template('about.html', title = "about");
 
 
 @app.route("/home")
