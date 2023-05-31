@@ -17,7 +17,6 @@ def master():
 def about():
     return render_template('about.html', title = "about");
 
-
 @app.route("/home")
 def home():
     blockchainObj.resolveConflicts();
