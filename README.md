@@ -1,12 +1,6 @@
+![Group 8 (1)](https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/67f3b539-8a52-4860-b1c5-cae2ba21232b)
 
-![Group 6](https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/df61a100-6f4b-4ba5-901f-d7a8fbfed3f7)
-![review page (17)](https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/76421ed7-92da-442d-961b-4427f2759866)
-![Group 9](https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/c6b3b3e3-1ad8-4c61-95dc-6cb5a840e3c1)
-![Group 10](https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/ff42feca-ad49-4d60-961f-19f6ba831d93)
-
-
-# What is Enigma Coin![Logo (7)](https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/368f42bd-a7a5-436f-bf47-9037fb347100)
- ?
+# What is ![Logo (9)](https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/127507b1-1420-4782-83d5-62afd84f1717) Enigma Coin ?
 
 Enigma Coin is a blockchain-based cryptocurrency project developed from scratch using Python. The aim of this project was to explore the application of RSA encryption in blockchain technology. We created our own blockchain with RSA encryption and implemented various functionalities like mining, transactions, and coin buying. In addition, we developed a web platform to showcase the functioning of the Enigma Coin.
 
@@ -22,7 +16,8 @@ Insert gif or link to demo
 **Server:** Node, Express
 
 ## Used By
-This project is made for GDSC Final Presentations
+This project is made for
+![GDSC Universiy of California, Davis Horizontal white](https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/a5611478-9bda-4006-a4ed-3d9f7e5a54be)
 
 ## Run Locally
 Clone the project
