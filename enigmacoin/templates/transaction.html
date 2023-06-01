@@ -15,6 +15,12 @@
 .custom-form { 
   color: #262837; 
 }
+
+.custom-form .form-control,
+	.custom-form .form-control-lg {
+		background-color: #262837;
+		color: #262837;
+	}
 	</style>
 
 	
@@ -27,7 +33,7 @@
 		  	<div class="form-group">
 		  		<label for="sender" style="color:rgb(240, 240, 246)">Sender:</label>
 	        {% if form.sender.errors  %}
-	        	{{ form.sender(class="form-control form-control-lg custom-form", type = "hidden", value = current_user.username)}}
+	        	{{ form.sender(class="form-control form-control-lg ", type = "hidden", value = current_user.username)}}
 	        	{{ form.dummy(class="form-control form-control-lg is-invalid", value = current_user.username, disabled=True)}}
 	          <div class = "invalid-feedback">
 	            {% for error in form.sender.errors %}
@@ -35,7 +41,7 @@
 	            {% endfor %}
 	          </div>
 	        {% else %}
-	        	{{ form.sender(class="form-control form-control-lg custom-form", type = "hidden", value = current_user.username)}}
+	        	{{ form.sender(class="form-control form-control-lg", type = "hidden", value = current_user.username)}}
 	          {{ form.dummy(class="form-control form-control-lg", value = current_user.username, disabled=True)}}
 	        {% endif %}
 	        <small id="fromAddressHelp" class="form-text" style="color:rgb(240, 240, 246)">
