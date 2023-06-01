@@ -1,4 +1,3 @@
-# Team Enigma
 
 ![Group 8 (1)](https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/67f3b539-8a52-4860-b1c5-cae2ba21232b)
 
