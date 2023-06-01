@@ -1,3 +1,5 @@
+# Team Enigma
+
 ![Group 8 (1)](https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/67f3b539-8a52-4860-b1c5-cae2ba21232b)
 
 # What is ![Logo (9)](https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/127507b1-1420-4782-83d5-62afd84f1717) Enigma Coin ?
@@ -5,7 +7,7 @@
 Enigma Coin is a blockchain-based cryptocurrency project developed from scratch using Python. The aim of this project was to explore the application of RSA encryption in blockchain technology. We created our own blockchain with RSA encryption and implemented various functionalities like mining, transactions, and coin buying. In addition, we developed a web platform to showcase the functioning of the Enigma Coin.
 
 
-## Demo
+# Demo
 
 
 
@@ -15,7 +17,7 @@ https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/ef2964eb-848f-4e56-a7d
 
 
 
-## Tech Stack
+# Tech Stack
 
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
@@ -29,8 +31,8 @@ https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/ef2964eb-848f-4e56-a7d
 
 
 
+# How to Run Locally
 
-## How to Run Locally
 ### Clone the project
 
 ```bash
@@ -57,7 +59,7 @@ https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/ef2964eb-848f-4e56-a7d
 
 
 
-## Features
+# Features
 ### Currently functioning:
 
 - ** Mining:** Users can participate in the mining process to validate transactions and earn Enigma Coins.
@@ -67,7 +69,7 @@ https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/ef2964eb-848f-4e56-a7d
 
 
 
-## Lessons Learned
+# Lessons Learned
 
 ### Throughout the development of this project, we learned the following:
 
@@ -78,7 +80,7 @@ https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/ef2964eb-848f-4e56-a7d
 
 
 
-## Optimizations
+# Optimizations
 
 ### During the development of this project, we made the following optimizations:
 
@@ -88,7 +90,7 @@ https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/ef2964eb-848f-4e56-a7d
 
 
 
-## Roadmap
+# Roadmap
 ### Our Future plans include
 
 - [ ] **Website enhancements:** Improve the Enigma Coin website with new features, such as real-time data visualization, user-friendly interface, and educational resources about Enigma Coin and blockchain technology.
@@ -101,15 +103,15 @@ https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/ef2964eb-848f-4e56-a7d
 - [ ] **Community engagement and education:** Foster a strong community around Enigma Coin through engagement activities, educational resources, and developer documentation to encourage participation, awareness, and growth within the Enigma Coin ecosystem.
 
 
-## License
+# License
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 
-## Contributing
+# Contributing
 
 Contributions are always welcome!
 Please adhere to this project's `code of conduct`.
 
 
-## This project is made for
+# This project is made for
 ![GDSC University of California, Davis Logo x1 (1)](https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/45356161-e6a5-474a-91e4-3500ec93078c)
