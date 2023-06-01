@@ -9,7 +9,7 @@
             background-color: black;
 	}
 	.custom-button {
-  background-color: #CA9654; 
+  background-color: #e3b200; 
   color: #000000; 
 }
 	</style>
@@ -19,7 +19,7 @@
 	<div class="container">
 		<div class="card-columns" display: inline-block>
 			{% for block in blockchain.chain %}
-			<div class="card border-primary mb-3" style="width: 16rem;">
+			<div class="card border-primary mb-3 custom-button" style="width: 16rem;">
 				<div class="card-body custom-button">
 				  <h5 class="card-title">Block<small class="text-muted">({{loop.index}})</small></h5>
 				</div>

@@ -1,5 +1,8 @@
 {% extends "layout.html" %}
 {% block content %}
+
+<link href="{{ url_for('static', filename='css/sb-admin.css') }}" rel="stylesheet" type="text/css">
+
 <style>
 	body {
 		background-image: url('static/change.png');
@@ -9,24 +12,10 @@
 	}
 
 	.custom-button {
-		background-color: #CA9654;
+		background-color: #e3b200;
 		color: #000000;
 	}
 
-	.custom-form {
-		color: #262837;
-	}
-
-	.custom-input {
-		background-color: #F0F0F0;
-		color: #262837;
-		border: none;
-	}
-
-	.custom-input::placeholder {
-		color: #262837;
-		opacity: 0.5;
-	}
 </style>
 
 <h1 style="color:rgb(240, 240, 246)">Create a Secure Transaction</h1>
@@ -38,7 +27,7 @@
 		<div class="form-group">
 			<label for="sender" style="color:rgb(240, 240, 246)">Sender:</label>
 			{% if form.sender.errors %}
-				{{ form.sender(class="form-control form-control-lg is-invalid custom-input") }}
+				{{ form.sender(class="form-control form-control-lg custom-input is-invalid") }}
 				<div class="invalid-feedback">
 					{% for error in form.sender.errors %}
 						<span>{{ error }}</span>
@@ -56,7 +45,7 @@
 		<div class="form-group">
 			<label for="reciever" style="color:rgb(240, 240, 246)">Receiver:</label>
 			{% if form.reciever.errors %}
-				{{ form.reciever(class="form-control form-control-lg is-invalid custom-input") }}
+				{{ form.reciever(class="form-control form-control-lg custom-input is-invalid") }}
 				<div class="invalid-feedback">
 					{% for error in form.reciever.errors %}
 						<span>{{ error }}</span>
@@ -73,7 +62,7 @@
 		<div class="form-group">
 			<label for="amount" style="color:rgb(240, 240, 246)">Amount:</label>
 			{% if form.amount.errors %}
-				{{ form.amount(class="form-control form-control-lg is-invalid custom-input") }}
+				{{ form.amount(class="form-control form-control-lg custom-input is-invalid") }}
 				<div class="invalid-feedback">
 					{% for error in form.amount.errors %}
 						<span>{{ error }}</span>
@@ -121,4 +110,5 @@
 		</div>
 	</form>
 {% endif %}
+
 {% endblock content %}

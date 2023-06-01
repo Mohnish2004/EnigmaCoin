@@ -9,7 +9,7 @@
             background-color: black;
         }
 	.custom-button {
-  background-color: #CA9654; 
+  background-color: #e3b200; 
   color: #000000; 
 }
 	</style>
@@ -57,7 +57,7 @@
 	</table>
 	{% if current_user.is_authenticated %}
 		<div class=""> 
-			<a href="{{url_for('mine', miner=current_user.username)}}"><button type="button" style="color:rgb(240, 240, 246)" class="btn btn-primary custom-button">Mine A New Block!</button></a>
+			<a href="{{url_for('mine', miner=current_user.username)}}"><button type="button"  class="btn btn-primary btn-block custom-button">Mine A New Block!</button></a>
 		</div>
 	{% else %}
 		<div class=""> 
