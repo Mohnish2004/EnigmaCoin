@@ -9,6 +9,10 @@ Enigma Coin is a blockchain-based cryptocurrency project developed from scratch 
 
 
 
+https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/ef2964eb-848f-4e56-a7d3-4df4e0cb4fac
+
+
+
 
 
 ## Tech Stack
