@@ -3,120 +3,122 @@
 <style>
 	body {
 		background-image: url('static/change.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-color: black;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: black;
 	}
 
 	.custom-button {
-  background-color: #CA9654; 
-  color: #000000; 
-}
-.custom-form { 
-  color: #262837; 
-}
+		background-color: #CA9654;
+		color: #000000;
+	}
 
-.custom-form .form-control,
-	.custom-form .form-control-lg {
-		background-color: #262837;
+	.custom-form {
 		color: #262837;
 	}
-	</style>
 
-	
-		<h1 style="color:rgb(240, 240, 246)">Create a Secure Transaction</h1>
-		<p style="color:rgb(240, 240, 246)">Transfer some money to someone!</p>
+	.custom-input {
+		background-color: #F0F0F0;
+		color: #262837;
+		border: none;
+	}
 
-		{% if current_user.is_authenticated %}
-			<form method = "POST", action = "">
-				{{ form.hidden_tag() }}
-		  	<div class="form-group">
-		  		<label for="sender" style="color:rgb(240, 240, 246)">Sender:</label>
-	        {% if form.sender.errors  %}
-	        	{{ form.sender(class="form-control form-control-lg ", type = "hidden", value = current_user.username)}}
-	        	{{ form.dummy(class="form-control form-control-lg is-invalid", value = current_user.username, disabled=True)}}
-	          <div class = "invalid-feedback">
-	            {% for error in form.sender.errors %}
-	              <span> {{ error }} </span>
-	            {% endfor %}
-	          </div>
-	        {% else %}
-	        	{{ form.sender(class="form-control form-control-lg", type = "hidden", value = current_user.username)}}
-	          {{ form.dummy(class="form-control form-control-lg", value = current_user.username, disabled=True)}}
-	        {% endif %}
-	        <small id="fromAddressHelp" class="form-text" style="color:rgb(240, 240, 246)">
-			    	This is your username, and funds will come from wallet address. Each transaction is verified by a crypto hash signature!
-			    </small>
-	      </div>
+	.custom-input::placeholder {
+		color: #262837;
+		opacity: 0.5;
+	}
+</style>
 
-		  	<div class="form-group">
-		  		<label for="reciever" style="color:rgb(240, 240, 246)">Reciever:</label>
-	        {% if form.reciever.errors %}
-	          {{ form.reciever(class="form-control form-control-lg is-invalid") }}
-	          <div class = "invalid-feedback">
-	            {% for error in form.reciever.errors %}
-	              <span> {{ error }} </span>
-	            {% endfor %}
-	          </div>
-	        {% else %}
-	          {{ form.reciever(class="form-control form-control-lg")}}
-	        {% endif %}
-	        <small id="fromAddressHelp" class="form-text" style="color:rgb(240, 240, 246)">
-			    	Enter in the username of who you want the crytocurrency to go to!
-			    </small>
-	      </div>
+<h1 style="color:rgb(240, 240, 246)">Create a Secure Transaction</h1>
+<p style="color:rgb(240, 240, 246)">Transfer some money to someone!</p>
 
-		  	<div class="form-group">
-		  		<label for="amount" style="color:rgb(240, 240, 246)">Amount:</label>
-	        {% if form.amount.errors  %}
-	          {{ form.amount(class="form-control form-control-lg is-invalid") }}
-	          <div class = "invalid-feedback">
-	            {% for error in form.amount.errors %}
-	              <span> {{ error }} </span>
-	            {% endfor %}
-	          </div>
-	        {% else %}
-	          {{ form.amount(class="form-control form-control-lg", type = "number")}}
-	        {% endif %}
+{% if current_user.is_authenticated %}
+	<form method="POST" action="">
+		{{ form.hidden_tag() }}
+		<div class="form-group">
+			<label for="sender" style="color:rgb(240, 240, 246)">Sender:</label>
+			{% if form.sender.errors %}
+				{{ form.sender(class="form-control form-control-lg is-invalid custom-input") }}
+				<div class="invalid-feedback">
+					{% for error in form.sender.errors %}
+						<span>{{ error }}</span>
+					{% endfor %}
+				</div>
+			{% else %}
+				{{ form.sender(class="form-control form-control-lg custom-input", type="hidden", value=current_user.username) }}
+				{{ form.dummy(class="form-control form-control-lg custom-input", value=current_user.username, disabled=True) }}
+			{% endif %}
+			<small id="fromAddressHelp" class="form-text" style="color:rgb(240, 240, 246)">
+				This is your username, and funds will come from the wallet address. Each transaction is verified by a crypto hash signature!
+			</small>
+		</div>
 
-	        {{ form.key(class="form-control form-control-lg", type = "hidden", value = current_user.key)}}
+		<div class="form-group">
+			<label for="reciever" style="color:rgb(240, 240, 246)">Receiver:</label>
+			{% if form.reciever.errors %}
+				{{ form.reciever(class="form-control form-control-lg is-invalid custom-input") }}
+				<div class="invalid-feedback">
+					{% for error in form.reciever.errors %}
+						<span>{{ error }}</span>
+					{% endfor %}
+				</div>
+			{% else %}
+				{{ form.reciever(class="form-control form-control-lg custom-input") }}
+			{% endif %}
+			<small id="toAddressHelp" class="form-text" style="color:rgb(240, 240, 246)">
+				Enter the username of the person you want to send the cryptocurrency to.
+			</small>
+		</div>
 
-	      </div>
-	      <div class="form-group">
-		  		{{ form.submit(class="btn btn-primary btn-block custom-button") }}
-		  	</div>
-		  <form>
-		{%else%}
-			<form method = "POST", action = "">
-				{{ formNL.hidden_tag() }}
-		  	<div class="form-group">
-		  		<label for="sender" style="color:rgb(240, 240, 246)">Sender:</label>
-	        {{ form.dummy(class="form-control form-control-lg", value = current_user.username, disabled=True)}}
-	        <small id="fromAddressHelp" class="form-text text-muted" style="color:rgb(240, 240, 246)">
-			    	This is your username, and funds will come from wallet address. Each transaction is verified by a crypto hash signature!
-			    </small>
-	      </div>
+		<div class="form-group">
+			<label for="amount" style="color:rgb(240, 240, 246)">Amount:</label>
+			{% if form.amount.errors %}
+				{{ form.amount(class="form-control form-control-lg is-invalid custom-input") }}
+				<div class="invalid-feedback">
+					{% for error in form.amount.errors %}
+						<span>{{ error }}</span>
+					{% endfor %}
+				</div>
+			{% else %}
+				{{ form.amount(class="form-control form-control-lg custom-input", type="number") }}
+			{% endif %}
+		</div>
 
-		  	<div class="form-group">
-		  		<label for="reciever" style="color:rgb(240, 240, 246)">Reciever:</label>
-	         
-	        {{ formNL.reciever(class="form-control form-control-lg", disabled=True)}}
-	        <small id="fromAddressHelp" class="form-text text-muted" style="color:rgb(240, 240, 246)">
-			    	Enter in the username of who you want the crytocurrency to go to!
-			    </small>
-	      </div>
+		<div class="form-group">
+			{{ form.key(class="form-control form-control-lg", type="hidden", value=current_user.key) }}
+		</div>
 
-		  	<div class="form-group">
-		  		<label for="amount" style="color:rgb(240, 240, 246)">Amount:</label>
-	        {{ formNL.amount(class="form-control form-control-lg", disabled=True)}}
-	      </div>
-	      <div class="form-group">
-		  		{{ formNL.submit(class="btn btn-info btn-block custom-button") }}
-		  	</div>
-	    <form>  
-		{%endif%}
+		<div class="form-group">
+			{{ form.submit(class="btn btn-primary btn-block custom-button") }}
+		</div>
+	</form>
+{% else %}
+	<form method="POST" action="">
+		{{ formNL.hidden_tag() }}
+		<div class="form-group">
+			<label for="sender" style="color:rgb(240, 240, 246)">Sender:</label>
+			{{ form.dummy(class="form-control form-control-lg custom-input", value=current_user.username, disabled=True) }}
+			<small id="fromAddressHelp" class="form-text text-muted" style="color:rgb(240, 240, 246)">
+				This is your username, and funds will come from the wallet address. Each transaction is verified by a crypto hash signature!
+			</small>
+		</div>
 
+		<div class="form-group">
+			<label for="reciever" style="color:rgb(240, 240, 246)">Receiver:</label>
+			{{ formNL.reciever(class="form-control form-control-lg custom-input", disabled=True) }}
+			<small id="toAddressHelp" class="form-text text-muted" style="color:rgb(240, 240, 246)">
+				Enter the username of the person you want to send the cryptocurrency to.
+			</small>
+		</div>
 
+		<div class="form-group">
+			<label for="amount" style="color:rgb(240, 240, 246)">Amount:</label>
+			{{ formNL.amount(class="form-control form-control-lg custom-input", disabled=True) }}
+		</div>
 
-
+		<div class="form-group">
+			{{ formNL.submit(class="btn btn-info btn-block custom-button") }}
+		</div>
+	</form>
+{% endif %}
 {% endblock content %}
