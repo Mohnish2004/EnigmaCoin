@@ -3,7 +3,7 @@
 
 <style>
 	body {
-		background-image: url('static/home.png');
+		background-image: url('static/change.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-color: black;
@@ -20,7 +20,7 @@
 		<div class="card-columns" display: inline-block>
 			{% for block in blockchain.chain %}
 			<div class="card border-primary mb-3" style="width: 16rem;">
-				<div class="card-body">
+				<div class="card-body custom-button">
 				  <h5 class="card-title">Block<small class="text-muted">({{loop.index}})</small></h5>
 				</div>
 				<ul class="list-group list-group-flush">

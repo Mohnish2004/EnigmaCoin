@@ -2,7 +2,7 @@
 {% block content %}
 <style>
 	body {
-		background-image: url('static/home.png');
+		background-image: url('static/change.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-color: black;
@@ -11,6 +11,9 @@
 	.custom-button {
   background-color: #CA9654; 
   color: #000000; 
+}
+.custom-form { 
+  color: #262837; 
 }
 	</style>
 
@@ -24,7 +27,7 @@
 		  	<div class="form-group">
 		  		<label for="sender" style="color:rgb(240, 240, 246)">Sender:</label>
 	        {% if form.sender.errors  %}
-	        	{{ form.sender(class="form-control form-control-lg", type = "hidden", value = current_user.username)}}
+	        	{{ form.sender(class="form-control form-control-lg custom-form", type = "hidden", value = current_user.username)}}
 	        	{{ form.dummy(class="form-control form-control-lg is-invalid", value = current_user.username, disabled=True)}}
 	          <div class = "invalid-feedback">
 	            {% for error in form.sender.errors %}
@@ -32,7 +35,7 @@
 	            {% endfor %}
 	          </div>
 	        {% else %}
-	        	{{ form.sender(class="form-control form-control-lg", type = "hidden", value = current_user.username)}}
+	        	{{ form.sender(class="form-control form-control-lg custom-form", type = "hidden", value = current_user.username)}}
 	          {{ form.dummy(class="form-control form-control-lg", value = current_user.username, disabled=True)}}
 	        {% endif %}
 	        <small id="fromAddressHelp" class="form-text" style="color:rgb(240, 240, 246)">
