@@ -13,32 +13,39 @@ Enigma Coin is a blockchain-based cryptocurrency project developed from scratch 
 
 ## Tech Stack
 
-**Client:** React, Redux, TailwindCSS
+![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
+![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Spotify](https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white)
 
-**Server:** Node, Express
 
 
 
 ## How to Run Locally
-Clone the project
+### Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/Mohnish2004/EnigmaCoin.git
 ```
 
-Go to the project directory
+### Go to the project directory
 
 ```bash
-  cd my-project
+  cd EnigmaCoin
 ```
 
-Install dependencies
+### Install dependencies
 
 ```bash
   npm install
 ```
 
-Start the local host
+### Start the local host
 
 ```bash
   python3 run.py
@@ -91,7 +98,6 @@ Start the local host
 
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 
