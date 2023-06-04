@@ -5,6 +5,8 @@
 
 Enigma Coin is a blockchain-based cryptocurrency project developed from scratch using Python. The aim of this project was to explore the application of RSA encryption in blockchain technology. We created our own blockchain with RSA encryption and implemented various functionalities like mining, transactions, and coin buying. In addition, we developed a web platform to showcase the functioning of the Enigma Coin.
 
+OUR PRESENTATION. - [enigma coin.pdf](https://github.com/Mohnish2004/EnigmaCoin/files/11644953/enigma.coin.pdf)
+
 
 # Demo
 
@@ -114,3 +116,5 @@ Please adhere to this project's `code of conduct`.
 
 # This project is made for
 ![GDSC University of California, Davis Logo x1 (1)](https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/45356161-e6a5-474a-91e4-3500ec93078c)
+
+![enigma coin](https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/06a88286-ecc9-493b-a607-a18dbb507ac7)
