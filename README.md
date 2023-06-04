@@ -115,6 +115,4 @@ Please adhere to this project's `code of conduct`.
 
 
 # This project is made for
-![GDSC University of California, Davis Logo x1 (1)](https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/45356161-e6a5-474a-91e4-3500ec93078c)
-
 ![enigma coin](https://github.com/Mohnish2004/EnigmaCoin/assets/81405395/06a88286-ecc9-493b-a607-a18dbb507ac7)
